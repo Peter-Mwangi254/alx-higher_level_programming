@@ -2,4 +2,5 @@
 def uppercase(str):
     result = ""
     for upper in str:
+
         
