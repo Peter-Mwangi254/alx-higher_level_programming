@@ -1,8 +1,11 @@
 #!/usr/bin/python3
-
-def replace_in_list(my_list, idx, element):
-    if idx < 0 or idx >= len(my_list):
-        return (my_list)
-    else:
-        my_list[idx] = element
-        return (my_list)
+def safe_print_list_integers(my_list=[], x=0):
+    count = 0
+    for i in range(x):
+        try:
+            print("{:d}".format(my_list[i]), end="")
+            count += 1
+        except (ValueError, TypeError):
+            pass
+    print()
+    return (count)
