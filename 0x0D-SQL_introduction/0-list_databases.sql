@@ -1,2 +1,2 @@
--- shows the all the databases available in your MYSQL server.
+-- 0-list_databases.sql.
 SHOW DATABASES;
