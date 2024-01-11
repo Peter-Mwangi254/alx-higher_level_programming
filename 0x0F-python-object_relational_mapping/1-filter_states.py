@@ -8,16 +8,16 @@ import MySQLdb
 from sys import argv
 
 if __name__ == '__main__':
-db_conn = MySQLdb.connect(
-    host="localhost", user=argv{1}, port=3306, passwd=argv{2}, db=argv{3})
+    db_conn = MySQLdb.connect(
+        host="localhost", user=argv[1], port=3306, passwd=argv[2], db=argv[3])
 
-mycursor = db_conn.cursor()
+    mycursor = db_conn.cursor()
 
-mycursor.execute(
-    "SELECT * FROM states WHERE name LIKE BINARY 'N%' \
-    ORDER BY states.id ASC")
+    mycursor.execute(
+        "SELECT * FROM states WHERE name LIKE BINARY 'N%' \
+                ORDER BY states.id ASC")
 
-rows_selected = mycursor.fetchall()
+    rows_selected = mycursor.fetchall()
 
-for row in rows_selected:
-    print(row)
+    for row in rows_selected:
+        print(row)
